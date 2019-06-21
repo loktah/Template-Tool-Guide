@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome file</title>
+  <title>ROES_TemplateTool_Guide</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
 
@@ -354,6 +354,681 @@
 <p><strong>retouch</strong>  – The retouch attribute can be used on an Image Option in ROES to mark the image for retouch in the KPARS module in DP2.</p>
 <p><strong>servercommand</strong> – The servercommand attribute is used to pass additional operations into DP2 (defined further in the ROES DP2 Server User’s Guide).</p>
 <p><strong>templateoffset</strong> – The templateoffset attribute can be set on a template as x,y coordinates to alter the bounds of user drawn nodes when passed back into the ROES Server for DP2.</p>
+<h2 id="attribute-description-by-product-type">Attribute description by product type</h2>
+<p>This is a dynamically generated list of the items in the <strong>Add Attribute</strong><br>
+menu. If something is shown there, it is explained here.</p>
+<p><strong>catalog</strong>: A mutually exclusive set of templates and options, which has the same structure as a templates file</p>
+<hr>
+<p><strong>wizard</strong><br>
+<strong>true</strong> Enable Books Wizard in this Catalog<br>
+<strong>false</strong> Do not enable Books Wizard in this Catalog; does not need to be set false</p>
+<p><strong>companionproductgroups</strong></p>
+<hr>
+<p><strong>companionproductgroup</strong></p>
+<hr>
+<p><strong>quantitymax</strong> Set a maximum quantity of a product<br>
+<strong>u_id</strong></p>
+<p><strong>u_ids</strong> Templates for companion products</p>
+<p><strong>config</strong>: FTP Configuration information, for lab control over ftp access.</p>
+<hr>
+<p><strong>actioncallback</strong> The<br>
+<strong>analytics</strong></p>
+<p><strong>banner</strong> The URL to a logo image to use in the top of the ROES Client<br>
+<strong>bookviewsenabled</strong><br>
+<strong>true</strong> Removes the user book pages over the workspace and adds new control buttons<br>
+<strong>false</strong> Not needed false</p>
+<p><strong>cartminimum</strong> The minimum price of a multi-order to allow completion, like orderminimum for a Catalog. If the order total is less than this and the user attempts to complete the order, a dialog is shown.<br>
+<strong>cartpriceminimum</strong> The minimum price of a multi-order, like priceminimum for a Catalog. If the order total is less than this the value here will be set as the order price.<br>
+<strong>checkoutthumbnails</strong><br>
+<strong>true</strong> This attribute is true by default in ROES so does not need to appear as true<br>
+<strong>false</strong> Removes the thumbs from Shipping pane when multiorder not enabled/false</p>
+<p><strong>cloudcart</strong> ROES Web - disabled retaining orders in the cloud<br>
+<strong>ftpuri</strong> The domain name (e.g. <a href="http://ftp.domain.com">ftp.domain.com</a>, not <a href="ftp://ftp.domain.com">ftp://ftp.domain.com</a>) or IP address of your FTP server<br>
+<strong>ftppath</strong> The path on the ftp server in which to upload orders<br>
+<strong>ftpuser</strong> The account used for uploading orders<br>
+<strong>ftppass</strong> The account password used to log in<br>
+<strong>ftpmode</strong> The ftp transfer mode, active or passive<br>
+<strong>icon</strong> The URL to an icon to use in ROES Client corner and OS taskbar<br>
+<strong>multiorder</strong><br>
+<strong>true</strong> Allow Multi-Catalog ordering<br>
+<strong>false</strong> Not needed false as multiorder disabled by default in v95</p>
+<p><strong>quitconfirm</strong><br>
+<strong>true</strong> Not needed, confirm exit popup shows by default<br>
+<strong>false</strong> Do not confirm exit from ROES</p>
+<p><strong>rtpuri</strong> The external IP address to upload to your RTP server; delete all FTP rleated attribs<br>
+<strong>rtpuri2</strong> The alternate external IP address to upload to your RTP server<br>
+<strong>saveinfobox</strong><br>
+<strong>true</strong> Not needed, checkbox to save card data appears by default<br>
+<strong>false</strong> Removes checkbox to save credit card data for future orders</p>
+<p><strong>searchcatalogs</strong><br>
+<strong>true</strong> Not needed, Search enabled by default<br>
+<strong>false</strong> Disables ROES Search</p>
+<p><strong>styledtext</strong><br>
+<strong>true</strong> styledtext enabled on all templates<br>
+<strong>false</strong> styledtext not enabled on all templates</p>
+<p><strong>switchtooptionsontemplateselect</strong><br>
+<strong>true</strong> Swap Option pane to show Product Options when new Template selected<br>
+<strong>false</strong> Not needed false, Options pane can stay on Text entry when switching templates</p>
+<p><strong>weburi</strong> The URL to open a web browser to when the banner is clicked<br>
+<strong>HOME_PANE_ATTRIBUTES</strong> Below attributes are for changing ROES Client home pane items including top pane button text<br>
+<strong>ActionFactory.bottomproductsbutton</strong> Add a spot to return to ordering pane in lower right of cart and define button text in field<br>
+<strong>ActionFactory.showcartpane</strong><br>
+<strong>ActionFactory.showhomepane</strong><br>
+<strong>ActionFactory.showtemplatesimages</strong><br>
+<strong>ActionFactory.showuploadspane</strong><br>
+<strong>bannerbackgroundimage</strong> Define a full URL to a file to show as the background color in the top bar of the ROES Client<br>
+<strong>bannerbuttonstextcolor</strong> The RGB values to set for the pane buttons text color in the top bar of the ROES Client<br>
+<strong>GetHelp</strong><br>
+<strong>homehelpurl</strong> Web URL to visit in browser from Get Help button<br>
+<strong>icon.homecart</strong><br>
+<strong>icon.homehelp</strong><br>
+<strong>icon.homeproducts</strong><br>
+<strong>icon.homeuploads</strong><br>
+<strong>icon.login</strong> URL to mask file to use to point customers to initial customer info entry and login button<br>
+<strong>Login</strong> text for log in button in ROES<br>
+<strong>OrderUploads</strong><br>
+<strong>ShowCart</strong><br>
+<strong>StartOrdering</strong><br>
+<strong>MAIN_PANE_ATTRIBUTES</strong> Below attributes are for changing ROES Client ordering pane items including button text and pane images<br>
+<strong>bottomviewcartbutton</strong><br>
+<strong>icon.addimages</strong><br>
+<strong>icon.addtoorder</strong><br>
+<strong>icon.viewcart</strong><br>
+<strong>OptionMenuButton.imageoptionstab</strong><br>
+<strong>OptionMenuButton.sizeoptionstab</strong><br>
+<strong>templatespanelabel</strong> URL to file to place at top left of Sizes area to replace the default Sizes image<br>
+<strong>imagespanelabel</strong> URL to file to place at top left of Sizes area to replace the default Sizes image<br>
+<strong>optionspanelabel</strong> URL to file to place at top right of Options area to replace the default Sizes image<br>
+<strong>CART_PANE_ATTRIBUTES</strong> Below attributes are for changing ROES Client cart pane items including button text and pane images<br>
+<strong>cartpanelabel</strong> URL to file to place at top left of Sizes area to replace the default Sizes image</p>
+<p><strong>copy_contents_from</strong></p>
+<hr>
+<p><strong>handle_layoutimage</strong><br>
+<strong>true</strong> Default behavior in ROES, not needed true<br>
+<strong>false</strong> Do not make use of layoutimage in copy_contents_from</p>
+<p><strong>into_bounds_with_rotation</strong> Set to the rotation needed to place copied image onto media, location x, location y, width and height of bounds to copy into. May have any degree of rotation 0 through 359. The width and height are used to calculate the scaling needed. Correctly applies a rotation to all nodes copied (text and image).<br>
+<strong>target_u_id</strong> Template u_id to copy from<br>
+<strong>with_node_bounds_for</strong> Set to one or more quintuplets (nodeID,x,y,w,h) identifying the new bounds value (x,y,w,h) that you want applied to the node identified by the first element of the quintuplet. If you want to explicitly set the bounds of more than one node just add an additional quintuplet for each node (e.g. To set node 10 to 5x5 and 20 to 3x3 - 10,0,0,5,5,20,0,0,3,3). Crops will automatically be adjusted for the new bounds.</p>
+<p><strong>copy_from</strong></p>
+<hr>
+<p><strong>bounds</strong> The bounds to define this as a node in the Production Template<br>
+<strong>noderotation</strong> Rotates the node but not the image<br>
+<strong>target_u_id</strong> Node u_id in original to copy from<br>
+<strong>u_id</strong></p>
+<p><strong>with_node_bounds</strong> The value should be set to the new bounds value. The crop will automatically be adjusted for the new bounds.</p>
+<p><strong>customer</strong></p>
+<hr>
+<p><strong>fieldnames</strong>: Contains a comma delimited list of field name presets for a Records table</p>
+<hr>
+<p><strong>fields</strong></p>
+<p><strong>label</strong></p>
+<p><strong>tablelabel</strong></p>
+<p><strong>image</strong>: Options which can be applied to images</p>
+<hr>
+<p><strong>item</strong>: Options which can be applied to any item in the order. These are always visible in the Options palette.</p>
+<hr>
+<p><strong>label</strong></p>
+<hr>
+<p><strong>border</strong> Define border values for the label if desired.<br>
+<strong>text</strong> Enter text or HTML-encoded text to use for label under Shipping or between Shipping Methods.<br>
+<strong>u_id</strong></p>
+<p><strong>link</strong></p>
+<hr>
+<p><strong>u_id</strong> A link is a reference, or pointer, to another item in the catalog. Just enter a u_id for the target item in the link, and the target item will be substituted by the ROES Client as if appears where the link does.</p>
+<p><strong>linknodes</strong></p>
+<hr>
+<p><strong>span</strong><br>
+<strong>true</strong> Span image across packages templates, u_ids value should be template u_id:node u_id,template u_id:node u_id,…<br>
+<strong>false</strong> Copy images between package templates</p>
+<p><strong>u_ids</strong> A linknodes is an element used to specify the nodes which should have images co-populated and crops sent between them. The u_ids attribute specifies the u_id of the nodes which should be linked.</p>
+<p><strong>masks</strong>: element for holding mask sub elements</p>
+<hr>
+<p><strong>mask</strong></p>
+<hr>
+<p><strong>label</strong> label for Mask to display<br>
+<strong>maskimage</strong> the URL to the mask image<br>
+<strong>rendermaskimage</strong> the path to the mask image for rendering</p>
+<p><strong>node</strong></p>
+<hr>
+<p><strong>autosize</strong><br>
+<strong>true</strong> set for autosize<br>
+<strong>false</strong> This attribute is only needed for true, false never needed</p>
+<p><strong>bounds</strong> The bounds of the node, before any rotations<br>
+<strong>bounds_expression</strong> The bounds to adjust any node by using an expression, like to add a quarter inch border and reduce node via .25,.25,[width]-.5,[height]-.5<br>
+<strong>capitalize</strong><br>
+<strong>true</strong> Capitalize first letter of each word in text node<br>
+<strong>false</strong> This attribute is only needed for true, false/not capitalizing is the default text node condition</p>
+<p><strong>capture_life_data</strong> ROES Desktop only - text node containes CL data<br>
+<strong>characterlimit</strong> Limit the number of characters in a text node.<br>
+<strong>checkbox_package</strong> For subject cards-Events, enter value like A for reference to Package A<br>
+<strong>checkbox_quantity</strong> For subject cards-Events, enter value like 1 for setting quantity of a package<br>
+<strong>checkbox_setfield</strong> For subject cards-Events, enter value of the subject info field for this node to populate to, defined as =<br>
+<strong>clearonaddtoorder</strong><br>
+<strong>true</strong> This node will be cleared of image or text when added to an order<br>
+<strong>false</strong> Not needed to be set to false as to leave image or text intact is default behavior</p>
+<p><strong>color</strong> Color for text in text nodes<br>
+<strong>editable</strong><br>
+<strong>true</strong> Text nodes only: user can modify text<br>
+<strong>false</strong> Text nodes only: prevents changing default text</p>
+<p><strong>facebounds</strong> Defines x,y,width,height of the facebounds node on the inage node<br>
+<strong>faceboundsu_id</strong> Enter the u_id of the node where isfacebounds true exists<br>
+<strong>fillcolor</strong> Fill color for nodes<br>
+<strong>fillcolormaskimage</strong> Mask image for fill colors<br>
+<strong>fit</strong><br>
+<strong>true</strong> Image is fit inside<br>
+<strong>false</strong> Image can be cropped</p>
+<p><strong>fitallowed</strong><br>
+<strong>true</strong> Fit can be used on node<br>
+<strong>false</strong> Fit is disabled on node</p>
+<p><strong>font</strong> The font name to use in this node if text is shown<br>
+<strong>id</strong> The node id in a layout file<br>
+<strong>input</strong><br>
+<strong>image</strong> This node accepts an image<br>
+<strong>text</strong> This node accepts text<br>
+<strong>none</strong> This empty node is used for drawing rectangles</p>
+<p><strong>ischeckbox</strong><br>
+<strong>true</strong> This node should serve as a checkbox for subject cards-Events<br>
+<strong>false</strong> Default behavior, never needed false</p>
+<p><strong>isfacebounds</strong><br>
+<strong>true</strong> This node should should be used for face detection<br>
+<strong>false</strong> Default behavior, never needed false</p>
+<p><strong>jobtext</strong> Text passed as-is to Kodak’s DP2 software to affect the job at print time<br>
+<strong>justify</strong><br>
+<strong>left</strong><br>
+<strong>center</strong><br>
+<strong>right</strong></p>
+<p><strong>label</strong> label for node to display<br>
+<strong>macro</strong> Text passed as-is to Kodak’s DP2 software to affect the job<br>
+<strong>maskimage</strong> User image mask URL<br>
+<strong>monochrome</strong> Amount to adjust RGB values after desaturating an image<br>
+<strong>newlines</strong> Sets number of lines for entry in text nodes, 1 restricts to a single line.<br>
+<strong>nodeimage</strong> Analogous to layoutimage for node, this is a lab predefined node image, plotted on top of the user image<br>
+<strong>noderotation</strong> The amount to rotate the node<br>
+<strong>opacity</strong> Opacity of the node, where 1.0 is fully opaque and 0.0 is fully transparent<br>
+<strong>outputrender</strong> Stand Alone Server use only, for nodeimages that should not render like diecut or canvas guides<br>
+<strong>outputrendermaskimage</strong><br>
+<strong>true</strong> Client default behavior: maskimage should be rendered.<br>
+<strong>false</strong> maskimage defined should NOT be rendered, such as guide image file.</p>
+<p><strong>pagerdecoratable</strong><br>
+<strong>true</strong> This node can be decorated using Pager tools but not moved in pager<br>
+<strong>false</strong> This node cannot be decorated by users in the Pager feature</p>
+<p><strong>pagereditable</strong><br>
+<strong>true</strong> This node can be edited by users in the Pager feature<br>
+<strong>false</strong> This node cannot be edited by users in the Pager feature</p>
+<p><strong>pagermovable</strong><br>
+<strong>true</strong> This node can be moved or resized by users in the Pager<br>
+<strong>false</strong> This node cannot be moved or resized by users in the Pager</p>
+<p><strong>ppumin</strong><br>
+<strong>ppumax</strong><br>
+<strong>rendertextwithencoding</strong> For subject cards-Events; Node should render as qrcode or code39 for a bar code<br>
+<strong>rotation</strong> For adjsting horizontal text in a tall thin node to be read on its side vertically, use 90 to turn text right/down or -90 to turn text left/up<br>
+<strong>sa_applylut</strong> USed by ROES Server to apply a look-up-table to the image in this node. LUT - 8 bit (0-255), 3 channel LUT (r,g,b) that has either 3 or 4 columns. The LUT file referenced is placed in the Layout Backgrounds folder defined in the ROES Server Order Directories tab<br>
+<strong>sa_ignore_monochrome</strong><br>
+<strong>true</strong> Will suppress the application of a monochrome attribute at the ROES Server render if present on same node<br>
+<strong>false</strong> Default behavior, never needed set false</p>
+<p><strong>sa_image_adjust_brightness</strong> Brightness:-255 to 255 - Used by a ROES Server Render to alter an images Brightness in a specific image node<br>
+<strong>sa_image_adjust_contrast</strong> Contrast: -255 to 255 - Used by a ROES Server Render to alter an images Contrast in a specific image node<br>
+<strong>sa_image_adjust_gamma</strong> Gamma: -255 to 255 - Used by a ROES Server Render to alter an images Gamma in a specific image node<br>
+<strong>sa_image_adjust_hsb</strong> Hue: -255 to 255, Saturation: -255 to 255, Brightness/Lightness: -255 to 255 - Used by a ROES Server Render to alter an images Hue, Saturation and Brightness/Lightness in this specific image node<br>
+<strong>sa_image_adjust_rgb</strong> Red: -255 to 255, Green: -255 to 255, Blue: -255 to 255 - Used by a ROES Server Render to alter an images Red, Green or Blue content.<br>
+<strong>sa_unsharpen</strong> (Starting value: 0.2,5,1) - Radius: 0 to 100.0, Amount: 0 to 100, Threshold: 0 to 255 - Used by a ROES Server Render to alter an images Sharpness in this specific image node. These values may also be used in the ROES Server Disk Printer<br>
+<strong>servercommand</strong></p>
+<p><strong>shape</strong><br>
+<strong>rectangle</strong> Node shape is a rectangle<br>
+<strong>ellipse</strong> Node shape is an ellipse<br>
+<strong>polygon</strong> Node shape is a polygon</p>
+<p><strong>size</strong> Size controls the maximum font size in text nodes<br>
+<strong>stripextension</strong> Set to true to remove extension from linked text node filenames.<br>
+<strong>striptext</strong> Text to remove from text nodes, usually the default text, to prevent it from being passed into the order<br>
+<strong>strokecolor</strong> The color to draw node rectangles<br>
+<strong>strokeimage</strong><br>
+<strong>true</strong> Stroke should circumscribe image<br>
+<strong>false</strong> Stroke should circumscribe node</p>
+<p><strong>strokelocation</strong> Defines stroke behavior to be on the outside of nodes, and makes strokewidth be in template units such as inches<br>
+<strong>stroketype</strong><br>
+<strong>solid</strong> Draw this node with a solid line<br>
+<strong>dashed</strong> Draw this node with a dashed line</p>
+<p><strong>strokewidth</strong> The width to draw node rectangles in inches - use with strokelocation<br>
+<strong>style</strong><br>
+<strong>plain</strong> Show this font in plain type<br>
+<strong>bold</strong> Show this font in bold<br>
+<strong>italic</strong> Show this font in italic<br>
+<strong>bolditalic</strong> Show this font in bold and italic</p>
+<p><strong>subjectcard</strong><br>
+<strong>true</strong> add to a template so an end user saved subject card is available on Favorites<br>
+<strong>false</strong> Default behavior, never needed false</p>
+<p><strong>text</strong> This is the default prompt to show for a text node<br>
+<strong>textentrywidth</strong> Value in pixels to display the animated text drawer for entry<br>
+<strong>u_id</strong> For use with overrides to make changes visible in client<br>
+<strong>unlockonaddtoorder</strong><br>
+<strong>true</strong> This node will be unlocked/cleared of Lock Image when added to an order<br>
+<strong>false</strong> This node will not be unlocked/cleared of Lock Image when added to an order</p>
+<p><strong>url</strong> URL to open when node is clicked. Only works with input “none” nodes<br>
+<strong>uppercase</strong><br>
+<strong>true</strong> Force all text in node to CAPS<br>
+<strong>false</strong> This attribute is only needed as true, false/not forcing CAPS is the default text node condition</p>
+<p><strong>verticaltext</strong><br>
+<strong>true</strong> Text should display vertically in node<br>
+<strong>false</strong> Should never be used, defaul text behavior is horizontal</p>
+<p><strong>vertices</strong> Vertices for polygonal nodes (shape must be polygon)</p>
+<p><strong>option</strong></p>
+<hr>
+<p><strong>audio</strong> Full URL to a file on the web to play<br>
+<strong>capture_life_data</strong> ROES Desktop or Web option with needs_text containes CL data<br>
+<strong>characterlimit</strong> Limit the number of characters in an option text field<br>
+<strong>code</strong> Use only on an option with a u_id of promocode, list values of acceptable promotional codes as code1,code2,code3<br>
+<strong>combobox</strong><br>
+<strong>true</strong> Option is listed as a drop down list instead of radio buttons; not for use with multiple choice lists<br>
+<strong>false</strong> Option is listed as radio buttons</p>
+<p><strong>disabled</strong><br>
+<strong>true</strong> Option is disabled by default<br>
+<strong>false</strong> Option is ensabled by default</p>
+<p><strong>disableu_id</strong> A comma delimited set of u_ids of options to disable when this option is selected<br>
+<strong>discount</strong> Use only on an option with a u_id of promocode in conjunction with code, list values of matching discount levels as .9,.8,.7 to give 10%,20%,30% off respectively<br>
+<strong>enableu_id</strong> A comma delimited set of u_ids of options to enable when this option is selected, intended for use with attribute “disabled”<br>
+<strong>expanded</strong><br>
+<strong>true</strong> Option group should be expanded initially (default)<br>
+<strong>false</strong> Option group should be collapsed initially</p>
+<p><strong>filter_type</strong><br>
+<strong>true</strong> Option includes specified templates<br>
+<strong>false</strong> Option excludes specified templates</p>
+<p><strong>heightincrement</strong> Custom size-Value like .5 or 1 for amount allowed for height increments<br>
+<strong>heightmax</strong> Custom size-max height for custom size offered via this option<br>
+<strong>heightmin</strong> Custom size-min height for custom size offered via this option<br>
+<strong>hidden</strong><br>
+<strong>true</strong> Option is hidden<br>
+<strong>false</strong> Option is visible</p>
+<p><strong>icon</strong> Enter a url to use as the label for this option; leave label attribute blank or with a single blank space<br>
+<strong>id</strong></p>
+<p><strong>is_capture_life</strong><br>
+<strong>provider_info</strong> This CL order option is for provider info, see Samples for examples<br>
+<strong>customer</strong> This CL order option is for customer info, see Samples for examples<br>
+<strong>customer_with_images</strong> This CL order option is for customer info with images, see Samples for examples</p>
+<p><strong>jobtext</strong> Text passed as-is to Kodak DP2 software to affect the job at print time<br>
+<strong>mandatory</strong><br>
+<strong>true</strong> User must select one<br>
+<strong>false</strong> User can select none</p>
+<p><strong>multiple_choice</strong><br>
+<strong>true</strong> User can select multiple<br>
+<strong>false</strong> User can only select one</p>
+<p><strong>needs_date</strong><br>
+<strong>true</strong> Choose a date for option value<br>
+<strong>false</strong> Attribute should not to be used/listed false</p>
+<p><strong>needs_file</strong><br>
+<strong>true</strong> User can add a file for this option via a file browser, e.g. for source images<br>
+<strong>false</strong> No file is needed for this option</p>
+<p><strong>needs_quantity</strong><br>
+<strong>true</strong> User can enter a quantity for this option<br>
+<strong>false</strong> Quantity of this option is determined by the layout to which it’s added</p>
+<p><strong>needs_size</strong> Custom size-Define this option as a custom size and how to calc price, i.e. width by height<br>
+<strong>needs_text</strong></p>
+<p><strong>needs_textarea</strong></p>
+<p><strong>nobutton</strong><br>
+<strong>true</strong> Option is displayed without a radio button or checkbox<br>
+<strong>false</strong> Option displays with usual radio button or checkbox</p>
+<p><strong>noreport</strong><br>
+<strong>true</strong> Do not report on this option<br>
+<strong>false</strong> Applies to order only</p>
+<p><strong>per_image</strong><br>
+<strong>true</strong> Option is distributed to all images in order when selected<br>
+<strong>false</strong> Applies to order only</p>
+<p><strong>per_item</strong><br>
+<strong>true</strong> Option is distributed to all layouts in order when selected<br>
+<strong>false</strong> Applies to order only</p>
+<p><strong>per_page</strong><br>
+<strong>true</strong> Option is distributed to all pages in book section when selected<br>
+<strong>false</strong> The per_section attribute does not need to be present unless true</p>
+<p><strong>per_template</strong><br>
+<strong>true</strong> Options in this group are distributed to all templates in a package when selected but shows only once<br>
+<strong>package</strong> Options in this group show and apply to package as a whole only<br>
+<strong>false</strong> Options in this group show on each template as separately selectable, default so not needed false</p>
+<p><strong>price</strong></p>
+<p><strong>priceminimum</strong> Use only with pricemultiplier to set a minimum amount to charge for an option if the percentage via pricemultiplier is less<br>
+<strong>pricemultiplier</strong><br>
+<strong>true</strong> Changes price of option to add a percentage of the product being applied to - price of 1.20 would add 20 percent<br>
+<strong>false</strong></p>
+<p><strong>required</strong><br>
+<strong>true</strong> This option set requires a selection to be made<br>
+<strong>false</strong> Do not use false, as required false is the default condition of an option</p>
+<p><strong>retouch</strong><br>
+<strong>true</strong> This option should be treated as a retouch<br>
+<strong>false</strong> This option should be treated as a common option</p>
+<p><strong>selected</strong><br>
+<strong>true</strong> Option is selected for the order by default<br>
+<strong>false</strong> Option must be selected by the user to be added to the order</p>
+<p><strong>servercommand</strong></p>
+<p><strong>taxable</strong><br>
+<strong>true</strong> This option should be taxable<br>
+<strong>false</strong> This option should not be taxable</p>
+<p><strong>tiertype</strong><br>
+<strong>step</strong> Make quantities above a given one cost a certain amount<br>
+<strong>graded</strong> Change the cost of lesser quantities when a certain quantity is reached<br>
+<strong>threshold</strong> Make this item always cost this amount when a given qty is reached</p>
+<p><strong>tooltip</strong> Enter text you would like to appear for this product when moused over in Sizes palette<br>
+<strong>totalpricemultiplier</strong> Enter value to multiply order total by, i.e. .9 for 10 percent off or 2 to double order price for rush order<br>
+<strong>u_id</strong></p>
+<p><strong>ui_columns</strong> Controls the number of columns of options in an option group<br>
+<strong>uses</strong> Totals sum of its attribute value (like weight) defined against a tiered price list, ideally used for shipping calcs<br>
+<strong>uses_size</strong> Use to determine option price for a custom size against a tiered price list, such as mounting, where price attrib is defined per sq inch<br>
+<strong>webviewurl</strong> Removes workspace and options, replaces with jfx webview<br>
+<strong>weight</strong> Enter a value to be used for weight calculations via the uses attribute in an Order Option<br>
+<strong>widthincrement</strong> Custom size-Value like .5 or 1 for amount allowed for width increments<br>
+<strong>widthmax</strong> Custom size-max width for custom size offered via this option<br>
+<strong>widthmin</strong> Custom size-min width for custom size offered via this option</p>
+<p><strong>function</strong>: An arbitrary string and value for advanced calculations based on products in the order.</p>
+<hr>
+<p><strong>value</strong>: A conditional value adjustment for order functions</p>
+<hr>
+<p><strong>change</strong> The value adjustment for an order function value</p>
+<p><strong>order</strong>: Options which can be applied to the entire order. These appear in the Order Review window of the ROES Client.</p>
+<hr>
+<p><strong>orderminimum</strong> The minimum price of an order. If the order total is less than this and the user attempts to complete the order, a dialog is shown.<br>
+<strong>priceminimum</strong> The minimum price of an order. The order price starts at this cost, regardless of contained items.<br>
+<strong>quantityminimum</strong> The minimum number of items in an order<br>
+<strong>quantitymaximum</strong> The maximum number of items in an order<br>
+<strong>ui_columns</strong> Controls the number of columns of options in an option group</p>
+<p><strong>overridesadd</strong>: Enables an Option to add template attributes and nodes when selected</p>
+<hr>
+<p><strong>overrideaddnode</strong>: A node added via an option override</p>
+<hr>
+<p><strong>overridesremove</strong>: Enables an Option to remove template attributes and nodes when selected</p>
+<hr>
+<p><strong>overrideremovenode</strong>: A node removed via an option override</p>
+<hr>
+<p><strong>pagertools</strong>: Pagertools should contain two elements, a template and a node, which contain tools that apply to each. Under these, options are defined that affect the current selected template or node.</p>
+<hr>
+<p><strong>production_template</strong></p>
+<hr>
+<p><strong>bounds</strong> The bounds of the produced product<br>
+<strong>u_id</strong></p>
+<p><strong>promocode</strong></p>
+<hr>
+<p><strong>description</strong> The value is the text above the code entry field, which with url can become a clickable button. Supports HTML formatting. If not assigned to the promocode element there will be no text above the entry field.<br>
+<strong>url</strong> Only valid if description is also defined. The value is the full URL of the web page to be displayed in a browser, such as a page of promo codes.</p>
+<p><strong>records</strong>: Element to contain various lab controllable Records abilities</p>
+<hr>
+<p><strong>shipping</strong>: Only for new Retail UI, to define shipping methods in order completion window</p>
+<hr>
+<p><strong>checkoutpolicies</strong> Text, including HTML encoded text/image calls, to appear in shipping selection wizard pane<br>
+<strong>checkoutpolicyposition</strong><br>
+<strong>bottom</strong> Checkout policy text appears at bottom of pane<br>
+<strong>left</strong> Checkout policy text appears at left of pane<br>
+<strong>right</strong> Checkout policy text appears at right of pane<br>
+<strong>top</strong> Checkout policy text appears at top of pane</p>
+<p><strong>methodsbeforeaddress</strong><br>
+<strong>true</strong> Shipping Methods show before address entry<br>
+<strong>false</strong> ShippingMethods show after address entry, the default</p>
+<p><strong>scrolls</strong><br>
+<strong>true</strong> Scroll bar exists for shipping selections<br>
+<strong>false</strong> No scroll bar for shipping selections, show all in single pane</p>
+<p><strong>shippingmethod</strong></p>
+<hr>
+<p><strong>cityexempt</strong><br>
+<strong>true</strong> Exempt from city tax<br>
+<strong>false</strong> Not exempt from city tax</p>
+<p><strong>countries</strong></p>
+<p><strong>countyexempt</strong><br>
+<strong>true</strong> Exempt from county tax<br>
+<strong>false</strong> Not exempt from county tax</p>
+<p><strong>default</strong><br>
+<strong>true</strong> This method is selected by default and will add its price to the order at launch<br>
+<strong>false</strong> This attribute never needs to be used as false</p>
+<p><strong>discountable</strong><br>
+<strong>true</strong> This Shipping Method should be discounted (this is the default condition in ROES so does not need to be listed true)<br>
+<strong>false</strong> This Shipping Method should not be discounted</p>
+<p><strong>fasttax</strong><br>
+<strong>true</strong> Use Fasttaxon this Shipping Method<br>
+<strong>false</strong> This attribute should not be used/is not needed set to false</p>
+<p><strong>id</strong></p>
+<p><strong>needsaddress</strong><br>
+<strong>true</strong> Present drop ship address field set<br>
+<strong>false</strong> This attribute should not be used/is not needed set to false</p>
+<p><strong>needsaddresspolicies</strong> Text, including HTML encoded text/image calls, to appear in shipping address wizard pane<br>
+<strong>needscounty</strong><br>
+<strong>true</strong> Add County field to drop ship address field set<br>
+<strong>false</strong> This attribute should not be used/is not needed set to false</p>
+<p><strong>needsphone</strong><br>
+<strong>true</strong> Not needed as this is the default with Phone field being required<br>
+<strong>false</strong> Do not show Phone field in needsaddress</p>
+<p><strong>price</strong></p>
+<p><strong>salestax</strong> ROES Web-Define as false or a decimal value to set a rate for this method, false-do not charge saletax on this order<br>
+<strong>saveaddress</strong><br>
+<strong>true</strong> Save drop ship address field date for future orders from this system<br>
+<strong>false</strong> This attribute should not be used/is not needed set to false</p>
+<p><strong>shipfrom</strong> To allow origin state tax calcs in fasttax as a quad of city,county,state,zip - all fully spelled out, no abbrev.<br>
+<strong>states</strong></p>
+<p><strong>statesfield</strong><br>
+<strong>true</strong> Make state field a free type field<br>
+<strong>false</strong> This attribute should not be used/is not needed set to false</p>
+<p><strong>stateexempt</strong><br>
+<strong>true</strong> Exempt from state tax<br>
+<strong>false</strong> Not exempt from state tax</p>
+<p><strong>taxable</strong><br>
+<strong>true</strong> This Shipping Method should be taxable<br>
+<strong>false</strong> This Shipping Method should not be taxable</p>
+<p><strong>taxrate</strong> Enter tax rate to be applied if this shipping method is chosen, usually for pickup by customer<br>
+<strong>tiertype</strong><br>
+<strong>step</strong> Make quantities above a given one cost a certain amount<br>
+<strong>graded</strong> Change the cost of lesser quantities when a certain quantity is reached<br>
+<strong>threshold</strong> Make this item always cost this amount when a given qty is reached</p>
+<p><strong>tooltip</strong> Enter text you would like to appear for this product when moused over in Sizes palette<br>
+<strong>u_id</strong></p>
+<p><strong>uses</strong> Totals sum of its attribute value (like weight) defined against a tiered price list, ideally used for shipping calcs</p>
+<p><strong>splashtip</strong>: The message to show at ROES Client launch, which can be plain text or a URL to an HTML page</p>
+<hr>
+<p><strong>size</strong></p>
+<p><strong>text</strong></p>
+<p><strong>template</strong></p>
+<hr>
+<p><strong>autosize</strong><br>
+<strong>true</strong> set for autosize<br>
+<strong>false</strong> This attribute is only needed for true, false never needed</p>
+<p><strong>addenabled</strong><br>
+<strong>true</strong> “Add to Order” button is always enabled, even with unfilled nodes<br>
+<strong>false</strong> “Add to Order” button is never enabled</p>
+<p><strong>addpagepaircount</strong> Number of pages to add inside a book, default is 1, set to 2 for 4 pages, or 2 pairs, per add<br>
+<strong>autorotate</strong><br>
+<strong>true</strong> User autorotate preference is preserved<br>
+<strong>false</strong> User autorotate preference is set to off when this template is selected</p>
+<p><strong>autoenqueue</strong><br>
+<strong>true</strong> Stand Alone Server: Auto enqueue this template for rendering<br>
+<strong>false</strong> Stand Alone Server: Do not auto enqueue this template for rendering</p>
+<p><strong>backgroundbackground</strong><br>
+<strong>true</strong> Layout background is plotted behind user images<br>
+<strong>false</strong> Layout background is plotted over user images</p>
+<p><strong>basequantity</strong> The base quantity of this template when packaged<br>
+<strong>bounding</strong><br>
+<strong>true</strong> The bounding, or outermost, template in a package<br>
+<strong>false</strong> A non bounding template in a package</p>
+<p><strong>bounds</strong> The bounds for the layout<br>
+<strong>clearonaddtoorder</strong><br>
+<strong>true</strong> This template will be cleared of images and text when added to an order<br>
+<strong>false</strong> Not needed to be set to false as to leave images and text intact is default behavior</p>
+<p><strong>color</strong> Background color for template<br>
+<strong>containertype</strong><br>
+<strong>package</strong> This template parents a package<br>
+<strong>book</strong> This template parents a book<br>
+<strong>section</strong> This template parents a book section<br>
+<strong>stack</strong> This template contains a stack</p>
+<p><strong>coversection</strong> Defines cover section of a ROES book, only used with containertype of section<br>
+<strong>cropbackground</strong> RGB values to use in crop area background for this template, default is 195,195,195.<br>
+<strong>defaulttemplate</strong> Enter template u_id to fill ROES book pages by default when blank page is viewed<br>
+<strong>description</strong> Text or HTML encoded text to be used for describing the book group type or exact book if on book container<br>
+<strong>disableu_idonorder</strong> Enter comma separated u_id’s to be disabled when this product is ordered<br>
+<strong>displayinset</strong> Define value for the crop area to be used by a template, i.e. .75 for 75 percent<br>
+<strong>dp2_banner</strong></p>
+<p><strong>dp2_bleed</strong></p>
+<p><strong>dp2_devicetype</strong> Example: nexpress<br>
+<strong>dp2_inkname</strong> Example: NexPress Dry Ink Clear<br>
+<strong>dp2_maxnodeid</strong> Define node value to use for DP2 node generation of mask nodes<br>
+<strong>dp2_produce</strong><br>
+<strong>true</strong> This template should be produced in DP2 (never needed to set true)<br>
+<strong>false</strong> This template should not be produced in DP2</p>
+<p><strong>dp2_templatename</strong> Example: 6.5x6.5 Soft Cov 2 S<br>
+<strong>enablewhenordertotal</strong> Order price total to enable this product - for use on freebie items<br>
+<strong>fit</strong><br>
+<strong>true</strong> Fit on all nodes<br>
+<strong>false</strong> Crop on all nodes</p>
+<p><strong>hidden</strong><br>
+<strong>true</strong> Template - like a companion album - is hidden<br>
+<strong>false</strong> Hidden not needed false on a template</p>
+<p><strong>icon</strong> Enter full URL to image to use for icon for template or book in wizard<br>
+<strong>id</strong> Layout id for lab business use, often same as layoutfile<br>
+<strong>ignorable</strong><br>
+<strong>true</strong> User can ignore the free items offered<br>
+<strong>false</strong> This attribute should never be used set to false as it is the default condition</p>
+<p><strong>inheritimages</strong><br>
+<strong>true</strong> For companion albums, set on book container<br>
+<strong>false</strong> Not needed false, companion albums need to inherit images</p>
+<p><strong>inheritoptions</strong><br>
+<strong>true</strong> Options defined on parent templates apply to this template<br>
+<strong>false</strong> Options defined on parent templates do not apply to this template</p>
+<p><strong>initialtemplates</strong> List comma separated list of template u_id’s to automatically place in ROES book section<br>
+<strong>is_capture_life</strong><br>
+<strong>provider_info</strong> This CL product is for provider info, see Samples for examples<br>
+<strong>customer</strong> This CL product is for customer info, see Samples for examples<br>
+<strong>customer_with_images</strong> This CL product is for customer info with images, see Samples for examples</p>
+<p><strong>isdp2book</strong><br>
+<strong>true</strong> This book or template should be passed into DP2 as a book<br>
+<strong>false</strong> This attribute should never have a false setting</p>
+<p><strong>ispackage</strong><br>
+<strong>true</strong> This template is a packaging comprising its children<br>
+<strong>false</strong> This template is a group or tab</p>
+<p><strong>itemcountmaximum</strong> Numeric value to define the maximum number of templates that can be in this section<br>
+<strong>itemcountminimum</strong> Numeric value to define the minimum number of templates that can be in this section<br>
+<strong>jobtext</strong> Text passed as-is to Kodak’s DP2 software to affect the job at print time<br>
+<strong>layoutfile</strong> DP2 layout file<br>
+<strong>layoutimage</strong> Layout background image URL<br>
+<strong>layoutimagestretched</strong><br>
+<strong>true</strong> Client default behavior: layoutimage defined should be stretched to fit the product applied over.<br>
+<strong>false</strong> layoutimage defined should NOT be stretched to fit the product applied over.</p>
+<p><strong>lockpage</strong><br>
+<strong>true</strong> This template should be locked and cannot be changed by the user by a drag and drop from the book filmstrip<br>
+<strong>false</strong> This template is unlocked and users can alter the template(s) in it (the default condition in ROES so should never appear set to false)</p>
+<p><strong>locksection</strong><br>
+<strong>true</strong> This template book section is locked and cannot be changed by the user.<br>
+<strong>false</strong> This template book section is unlocked and users can alter the template(s) in it.</p>
+<p><strong>nextselectedonorder</strong> ROES URL string of u_id’s to jump to when free or special item is added to order<br>
+<strong>nodemouseincolor</strong> RGB values for mouse in crop area set as R,G,B,A<br>
+<strong>noritsu_swap_axis</strong><br>
+<strong>true</strong> Instruct Net Order or Hot Folder Agents in ROES Server to swap template bounds<br>
+<strong>false</strong> Default behavior in server, never needs to be added false</p>
+<p><strong>ordertier</strong><br>
+<strong>true</strong> Tiered pricing should be derived from the total quantity of this template in the order, regardless of image<br>
+<strong>false</strong> Tiered pricing should be derived from the quantity this template on a per-image basis</p>
+<p><strong>outputrenderlayoutimage</strong><br>
+<strong>true</strong> Client default behavior: layoutimage should be rendered.<br>
+<strong>false</strong> layoutimage defined should NOT be rendered, such as guide image file for canvas or diecut.</p>
+<p><strong>packageeditable</strong><br>
+<strong>true</strong> Not needed if true, default condition<br>
+<strong>false</strong> This package cannot be edited</p>
+<p><strong>packagexy</strong> Co-ordinates in crop area for packaged template as x,y<br>
+<strong>pagelabel</strong> Label for pages in a ROES book section, i.e. Cover, only used on containertype section<br>
+<strong>pagereditable</strong><br>
+<strong>true</strong> This template can be edited by users in the Pager feature<br>
+<strong>false</strong> This template cannot be edited by users in the Pager feature</p>
+<p><strong>panoramic</strong><br>
+<strong>true</strong> This template is a panoramic in a book<br>
+<strong>false</strong> This template is not a panoramic in a book</p>
+<p><strong>pb_dp2_produce</strong><br>
+<strong>true</strong> This pb_id should be produced in DP2<br>
+<strong>false</strong> This pb_id, like pre-made book covers - should not be produced in DP2</p>
+<p><strong>pb_dp2_unbook</strong><br>
+<strong>true</strong> This should be flattened into single templates in DP2<br>
+<strong>false</strong> This attribute should never be used false</p>
+<p><strong>pb_explicitend</strong><br>
+<strong>true</strong> The production book should end on this template - not for use on a section<br>
+<strong>false</strong> The production book does not end on this template</p>
+<p><strong>pb_id</strong> Production Book id value for this book<br>
+<strong>pb_mergeonsameid</strong><br>
+<strong>true</strong> This template should be produced with the same pb_id book items<br>
+<strong>false</strong> This template, like separate production for front and back covers - should not be merged with rest of book despite sharing pb_id value</p>
+<p><strong>pb_pagespan</strong> Page span value for book<br>
+<strong>pb_produce</strong><br>
+<strong>true</strong> This pb_id should be produced with the book<br>
+<strong>false</strong> This pb_id, like pre-made book covers - should not be produced for lab printing</p>
+<p><strong>pb_sa_impositionsignature</strong> For Stand Alone Rendering only - defines page render order<br>
+<strong>pb_sa_renderedpagebounds</strong> For Stand Alone Rendering only - used on a section to define a rendering size for pages, i.e. a 10x10 set of opposing pages to render as 20x10 would be expressed as bounds values 0,0,20,10<br>
+<strong>pb_sa_pageseparator</strong> For Stand Alone Rendering only - defines page separator value<br>
+<strong>pb_sa_unitmargin</strong> For Stand Alone Rendering only - defines unit margin value<br>
+<strong>preferredqueue</strong> Stand Alone Server queue to use for this template<br>
+<strong>price</strong></p>
+<p><strong>pricelabel</strong> Set on book level to show an overall price and mask the base book price<br>
+<strong>printerchannel</strong> Channel entry for printer such as Noritsu MP1600<br>
+<strong>printersurface</strong> Surface entry for printer such as Noritsu MP1600<br>
+<strong>qsssurface</strong> Surface entry for Noritsu Net Order<br>
+<strong>quantitymax</strong> Set a maximum quantity of a product<br>
+<strong>quantitymin</strong> Set a minium quantity of a product<br>
+<strong>resetrotationonaddtoorder</strong><br>
+<strong>true</strong> This template will be rotated back to default when added to an order<br>
+<strong>false</strong> This template will not be back to default when added to an order</p>
+<p><strong>rotation</strong> Degrees to rotate the layout initially in ROES client<br>
+<strong>rotationallowed</strong><br>
+<strong>true</strong> This template can be rotated<br>
+<strong>false</strong> This template cannot be rotated</p>
+<p><strong>rotationamount</strong> Degrees to rotate the layout when the Rotate layout is clicked<br>
+<strong>sa_create_companion</strong> q,w,h - where q is the quantity, w is the width and h is the height of a companion product that is to be produced. Used in the Duplicate and Scale Agent to create an additional, duplicate product in an order. To add multiple products to a template, add an underscore and a number (sa_create_companion_1, sa_create_companion_2, sa_create_companion_3, etc).<br>
+<strong>sa_dont_render</strong><br>
+<strong>true</strong> Do not render this template, such as a Capture Life item<br>
+<strong>false</strong> Do render template, attribute never needed as false</p>
+<p><strong>sa_pagespan</strong> Stand Alone Rendering only - To define a panoramic template for rendering. Set to 2 and only add if a pano product.<br>
+<strong>sa_rotation</strong> Value instructs the ROES Server to rotate the template when rendering.<br>
+<strong>sectionimage</strong> URL to image file for display over this section - usually on a cover<br>
+<strong>sectionimageback</strong> URL to image file for display over the back cover<br>
+<strong>sectionimagebounds</strong> allows for extending the section image bounds to extend beyond the bounds of the book templates/master bounds. Use negative x and y<br>
+<strong>sectionimageboundsback</strong> allows for extending the section image bounds to extend beyond the bounds of the back of the book templates/master bounds. Use negative x and y<br>
+<strong>sectionimageboundsfront</strong> allows for extending the section image bounds to extend beyond the bounds of the front of the book templates/master bounds. Use negative x and y<br>
+<strong>sectionimagefront</strong> URL to image file for display over the front cover<br>
+<strong>sectionimageleft</strong> URL to image file for display over the left templates in this section<br>
+<strong>sectionimageright</strong> URL to image file for display over the right templates in this section<br>
+<strong>servercommand</strong></p>
+<p><strong>sizespaletteiconlayout</strong><br>
+<strong>flow</strong> Icons in template group wrap like words in Western languages based on palette size<br>
+<strong>grid</strong> Icons in template group are constrained to a grid, and are affected by the ui_columns attribute</p>
+<p><strong>sizespaletteiconsize</strong> The size of icons in the sizes palette. The default size is 52.<br>
+<strong>sizespalettetextposition</strong><br>
+<strong>bottom</strong> Text for product appears below icon in sizes palette<br>
+<strong>right</strong> Text for product appears to the right of icon in sizes palette</p>
+<p><strong>spinalgap</strong> Width to set as a gap for spine/binding appearance<br>
+<strong>styledtext</strong><br>
+<strong>true</strong> styledtext enabled on nodes in this template<br>
+<strong>false</strong> styledtext not enabled on nodes in this templates</p>
+<p><strong>templateoffset</strong> Widths and height to offset Pager nodes when added to a template above 0,0<br>
+<strong>tiertype</strong><br>
+<strong>step</strong> Make quantities above a given one cost a certain amount<br>
+<strong>graded</strong> Change the cost of lesser quantities when a certain quantity is reached<br>
+<strong>threshold</strong> Make this item always cost this amount when a given quantity is reached</p>
+<p><strong>tooltip</strong> Enter text you would like to appear for this product when moused over in Sizes palette<br>
+<strong>totalpricemultiplier</strong> For use on an overridesadd off an Option to change overall order price by percentage, such as 2 for double order price<br>
+<strong>u_id</strong></p>
+<p><strong>ui_columns</strong> Controls the number of columns of products in a template group when sizespaletteiconlayout “grid” is used<br>
+<strong>unitu_id</strong> For use with units: this is the u_id of the unit comprising this template<br>
+<strong>unitquantity</strong> For use with units: use 1 for half-unit if offered and then 2 for full units or 1 for all full units<br>
+<strong>verticalflip</strong><br>
+<strong>true</strong> This book flips pages up or down<br>
+<strong>false</strong> This book flips pages left and right</p>
+<p><strong>verticaltext</strong><br>
+<strong>true</strong> Text should display vertically<br>
+<strong>false</strong> Text should display horizontally as default method in ROES</p>
+<p><strong>weight</strong> Enter a value to be used for weight calculations via the uses attribute in an Order Option<br>
+<strong>webviewurl</strong> Removes workspace and options, replaces with jfx webview. selection of subsequent template, includes roes url from webview, reverts to workspace display<br>
+<strong>wizardbackground</strong> Full URL to file to be used for the next wizard step<br>
+<strong>wizardsteptitle</strong> Title to be used for the next wizard step</p>
+<p><strong>tints</strong>: element for holding tint sub elements</p>
+<hr>
+<p><strong>tint</strong></p>
+<hr>
+<p><strong>jobtext</strong> the DP2 jobtext for image tone conversion<br>
+<strong>monochrome</strong> the RGB values for conversion</p>
+<p><strong>unit</strong></p>
+<hr>
+<p><strong>price</strong> The price for one unit or half-unit if offered<br>
+<strong>tiertype</strong><br>
+<strong>step</strong> Make quantities above a given one cost a certain amount<br>
+<strong>graded</strong> Change the cost of lesser quantities when a certain quantity is reached<br>
+<strong>threshold</strong> Make this item always cost this amount when a given quantity is reached</p>
+<p><strong>u_id</strong></p>
+<p><strong>unitu_id</strong> The u_id of this unit, used by templates to show to which unit the template belongs</p>
 </div>
 </body>
 
