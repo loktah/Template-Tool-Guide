@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Attributes</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><strong>The Shipping element has a few attributes that can be used, but none are required:</strong></p>
+<p><strong>checkoutpolicies</strong> – plain text or HTML encoded text, including images, to be displayed in the Shipping Method selection pane in the wizard</p>
+<p><strong>checkoutpolicyposition</strong> – set to top, bottom, left or right, this defines where in the wizard pane the text of the checkoutpolicies displays (top is the default)</p>
+<p><strong>scrolls</strong> – set to true or false, the defines whether the list of Shipping Methods should show a scoll bar or simply show all available methods (false is the default when added)</p>
+<p><strong>Shipping Methods has several default attributes that must always be left in place (id, label, price, u_id) and others that can be added:</strong></p>
+<p><strong>countries</strong> – list of countries to display via drop down list when needsaddress fields are presented (prevents manual entry of data)</p>
+<p><strong>default</strong>  – The default attribute can be added onto Shipping Method to pre-select that method for the user.  When added it will default to true as the value, and this is the only way it needs to be added (default never needs to be set to false).</p>
+<p><strong>discountable</strong>  – The discountable attribute can be set on a Shipping Method to prevent the price from being considered in a discount percentage calculation.</p>
+<p><strong>true</strong>  - This Shipping Method should be discounted (this is the default condition in ROES so does not need to be listed true)</p>
+<p><strong>false</strong>  - This Shipping Method should not be discounted</p>
+<p><strong>id</strong>  – The id attribute is added by default on a Shipping Method and should remain there.  It can be set with a value to define the accounting or internal code for the Shipping Method listed.</p>
+<p><strong>label</strong>  – The label attribute will appear by default to be edited for the name of the Shipping Method, such as ‘UPS Ground’.</p>
+<p><strong>needsaddress</strong>  – The needsaddress attribute can be added onto a Shipping Method to create an extra set of fields to be used for a shipping address, usually for drop shipping needs.  It will also be used for calculating tax on the order.</p>
+<p><strong>needsaddresspolicies</strong>  – Allows display of plain or HTML encoded text as instructions, etc. when the shipping address field set is presented during the completion wizard</p>
+<p><strong>needscounty</strong>  – set to true or false, the needscounty attribute can be added onto a Shipping Method to create an extra county field in the needsaddress field set.  It will also be used for calculating tax on the order, if county values are taken into consideration.</p>
+<p><strong>needsphone</strong>  – set to true or false, the needsphone attribute can be added to a Shipping Method with needsaddress to define whether the phone field should be present or not.</p>
+<p><strong>price</strong>  – The price attribute will appear by default to set the desired price for the Shipping Method.  When used with tiertype and uses, this value can be set to a string of values to help determine the most accurate shipping price for the order.</p>
+<p><strong>saveaddress</strong>  - The saveaddress attribute can be added onto a Shipping Method that has needsaddress set on it to retain the needsaddress data between orders.</p>
+<p><strong>states</strong>  – The states attribute can be added onto a Shipping Method to define a list of states to be offered via  needsaddress  State  field.</p>
+<p><strong>taxable</strong>  – The taxable attribute can be added onto a Shipping Method to define whether or not the Shipping Method should be taxed. By default, Shipping is not taxed in ROES, so this will never be need to be set to false, only true when needed.</p>
+<p><strong>true</strong>  - This Shipping Method should be taxed</p>
+<p><strong>false</strong>  - This Shipping Method should not be taxed (not needed to be listed false as this is default condition in ROES)</p>
+<p><strong>taxrate</strong>  – The taxrate attribute can be added onto a Shipping Method to set a hard tax percentage to be used for calculating tax on the order. This will still apply regardless if address data listed by the customer, and is ideally used for a ‘lab pickup’ Shipping Method where you will always look to charge tax.</p>
+<p><strong>tiertype</strong>  – The tiertype attribute can be added onto a Shipping Method to help define the price of the method when used with uses and price. For shipping calculations generally tiertype should only be set to threshold.</p>
+<p><strong>u_id</strong>  – The u_id attribute will appear by default on the Shipping Method and should always be left as is.</p>
+<p><strong>uses</strong>  - The uses attribute can be added and used to help calculate the price of the Shipping Method based on the price and tiertype values.  It can be set to either price or weight to match the desired calculation, such as the order price or the total of the weight attribute values on products in the order.</p>
+<p><strong>Label - The Label element can be added off Shipping and placed above, below, or interspersed with Shipping Methods to act as a separator or presentation of information:</strong></p>
+<p><strong>border</strong>  – set to R,G,B values can define a frame to encase the text for a label element</p>
+<p><strong>text</strong> – plain text or HTML encoded text, including images, to be displayed in the Shipping Methods selection pane of the completion wizard</p>
+</div>
+</body>
+
+</html>

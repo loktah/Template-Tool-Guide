@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Option Attributes</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><strong>For use on Option parents</strong></p>
+<p><strong>expanded</strong><br>
+<strong>true</strong> option group should be expanded initially (default)<br>
+<strong>false</strong> option group should be collapsed initially</p>
+<p><strong>mandatory</strong><br>
+<strong>true</strong> user must select one from the list, with the first option in the list being added by default<br>
+<strong>false</strong> user can select none</p>
+<p><strong>multiple_choice</strong><br>
+<strong>true</strong> user can select multiple<br>
+<strong>false</strong> user can only select one (default behavior for option sets)</p>
+<p><strong>required</strong>  – For Order Options usage only:  user must select an option from the list, however none will be pre-selected.  An alert window will be shown when the customer tries to complete the order if the user fails to select one of the child options.</p>
+<p><strong>ui_columns</strong>  - used to force a template group to a set level of columns, expressed as a whole number.</p>
+<p><strong>For use on selectable options</strong></p>
+<p><strong>code</strong> – For use with promocode and discount attributes on an option, as follows: The promocode attribute has 2 uses, in an order option to apply to an entire order (all ROES Versions) or on a template level option to discount a product (versions 6.13 and higher). This can be set on an option that prompts for a promotional code to be entered in a needs_text line, and causes a discount on the template or order as either a percentage of the item/order or a whole dollar amount. The u_id of the option used for entry  <strong>MUST be promocode</strong>  and there are 3 attributes needed:  <strong>needs_text</strong>  for the user entry,  <strong>code</strong>  for the value of the promo code(s) that the text entry must match exactly, and  <strong>discount</strong>  for the amount to calculate, i.e. .90 for a 10% discount on the order or -10 for a $10 discount (negative numbers will be looked at as a whole dollar amount to be taken off). To utilize multiple promotional codes, simply use comma delimited lists in the code and discount fields, where code could have value of 1234,2345,3456 and discount could have value of .9,.75,-20 for 10% off, 25% off and $20 off for the 3 codes respectively. The number of delimited entries must match between the code and discount fields (5 in each, 10 in each, etc.).</p>
+<p><strong>disableu_id</strong> - expressed as a single, or comma delimited set of, u_ids of other options to disable when this option is selected.  As in the example below, a lab may offer multiple types of retouching, L:ight, Standard and Heavy.  Each of these selectable options would have its’ own u_id, and a disableu_id attribute line listed as below with the u_id’s of the other 2 retouching selections.  When one was selected the other 2 would be grayed out and made unselectable, as shown below.</p>
+<p><strong>disabled</strong><br>
+<strong>true</strong> option is disabled by default<br>
+<strong>false</strong> option is enabled by default</p>
+<p><strong>discount</strong>  –  For use with promocode and code attributes on an option, as follows: The promocode attribute has 2 uses, in an order option to apply to an entire order (all ROES Versions) or on a template level option to discount a product (versions 6.13 and higher). This can be set on an option that prompts for a promotional code to be entered in a needs_text line, and causes a discount on the template or order as either a percentage of the item/order or a whole dollar amount. The u_id of the option used for entry  <strong>MUST be promocode</strong>  and there are 3 attributes needed:  <strong>needs_text</strong>  for the user entry,  <strong>code</strong>  for the value of the promo code(s) that the text entry must match exactly, and  <strong>discount</strong>  for the amount to calculate, i.e. .90 for a 10% discount on the order or -10 for a $10 discount (negative numbers will be looked at as a whole dollar amount to be taken off). To utilize multiple promotional codes, simply use comma delimited lists in the code and discount fields, where code could have value of 1234,2345,3456 and discount could have value of .9,.75,-20 for 10% off, 25% off and $20 off for the 3 codes respectively. The number of delimited entries must match between the code and discount fields (5 in each, 10 in each, etc.).</p>
+<p><strong>enableu_id</strong> a comma delimited set of u_ids of options to enable when this option is selected, intended for use with attribute “disabled”</p>
+<p><strong>filter_type</strong><br>
+<strong>true</strong> option includes specified templates</p>
+<p><strong>false</strong> option excludes specified templates</p>
+<p><strong>id</strong> – The id attribute on a selectable option allows you to define a value for an accounting or SKU code.</p>
+<p><strong>needs_quantity</strong> - adds a numeric entry box onto an option to help define options like Retouching - extra heads, teeth whitening to enter the number of teeth,<br>
+<strong>true</strong> user can enter a qty for this option<br>
+<strong>false</strong> quantity of this option is determined by the layout to which it’s added</p>
+<p><strong>needs_text</strong> - allows for a free text entry line via an option for the customer to enter things like an album number and/or page to assist the lab in building an album in the proper order,</p>
+<p><strong>needs_textarea</strong> - like needs_text, allows for a free text entry area via an option for the customer to enter things like head swap instructions, drop ship addresses, or special image handling instructions.</p>
+<p><strong>retouch</strong> - only for use in DP2 with the Retouching module, this attribute will mark the order and the image with a status of Retouch. If the Retouching module is not in use the order will error out when it hits DP2.<br>
+<strong>true</strong> this option should be treated as a retouch<br>
+<strong>false</strong> this option should be treated as a common option</p>
+<p><strong>jobtext</strong></p>
+<p><strong>promocode</strong> - For use with code and discount attributes on an option, as follows: The promocode attribute has 2 uses, in an order option to apply to an entire order (all ROES Versions) or on a template level option to discount a product (versions 6.13 and higher). This can be set on an option that prompts for a promotional code to be entered in a needs_text line, and causes a discount on the template or order as either a percentage of the item/order or a whole dollar amount. The u_id of the option used for entry  <strong>MUST be promocode</strong>  and there are 3 attributes needed:  <strong>needs_text</strong>  for the user entry,  <strong>code</strong>  for the value of the promo code(s) that the text entry must match exactly, and  <strong>discount</strong>  for the amount to calculate, i.e. .90 for a 10% discount on the order or -10 for a $10 discount (negative numbers will be looked at as a whole dollar amount to be taken off). To utilize multiple promotional codes, simply use comma delimited lists in the code and discount fields, where code could have value of 1234,2345,3456 and discount could have value of .9,.75,-20 for 10% off, 25% off and $20 off for the 3 codes respectively. The number of delimited entries must match between the code and discount fields (5 in each, 10 in each, etc.).</p>
+</div>
+</body>
+
+</html>

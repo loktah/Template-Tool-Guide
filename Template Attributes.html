@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Attributes</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><strong>emplate/Product Attributes</strong> - these attributes are added directly onto a template or product size or on an overridesadd element to alter a template via an option selection.</p>
+<p><strong>addenabled</strong> - set to true on a template/product to allow it to be ordered with empty nodes (i.e. a proof book page where the customer may only have 7 images for a 9-up sheet) or set to false on an informational template so that it can never be added to the order (a template with a JPEG layoutimage used as the first item in the catalog to advise on a minimum order amount).<br>
+<strong>true</strong> “Add to Order” button is always enabled, even with empty nodes<br>
+<strong>false</strong> “Add to Order” button is never enabled</p>
+<p><strong>addpagepaircount</strong>  - Number of pages to add/remove inside a book when user clicks to add or remove a page, default is 1, set to 2 for 4 pages, or 2 pairs, per add/remove.</p>
+<p><strong>autorotate</strong> - use this attribute to force de-selection of the autorotate button in the pro toolbar<br>
+<strong>true</strong> user autorotate preference is preserved (no changes made)<br>
+<strong>false</strong> user autorotate preference is set to off when this template is selected</p>
+<p><strong>autoenqueue</strong> - Stand Alone Server use only - use this attribute to define whether or not product is to be enqueued for rendering/printing/fed to back end system when order is processed.  This attribute will override the Auto-Enqueue checkbox in the Options tab.<br>
+<strong>true</strong> Enqueue template at time of order processing<br>
+<strong>false</strong> Do not enqueue template at time of order processing</p>
+<p><strong>backgroundbackground</strong> - used to add a background image onto a product for presentation in the client, used with layoutimage.  Used on memory mates, trader cards, greeting cards, calendars and even proof book or album pages.<br>
+<strong>true</strong> layout background defined in layoutimage is plotted behind user images (most common use)<br>
+<strong>false</strong> layout background defined in layoutimage is plotted over user images, where part of the background should mask a part of the image(s)</p>
+<p><strong>basequantity</strong> - the base quantity of this template when packaged</p>
+<p><strong>bounding</strong></p>
+<p><strong>true</strong> the bounding, or outermost, template in a package<br>
+<strong>false</strong> a non bounding template in a package</p>
+<p><strong>bounds</strong> - bounds for the layout overall size</p>
+<p><strong>clearonaddtoorder</strong> - use this attribute to clear image(s) and text from a template when it is added to an order.<br>
+<strong>true</strong> clear image(s) and text from a template when it is added to an order<br>
+<strong>false</strong> clearonaddtoorder should never be used false as this is the default condition in ROES</p>
+<p><strong>color</strong> - background color for template (i.e. black for an album page)</p>
+<p><strong>containertype</strong>  - defines this template as a container of other templates to form a single item or entity within an item</p>
+<p><strong>package</strong>  This template parents a package</p>
+<p><strong>book</strong>  This template parents a book</p>
+<p><strong>section</strong>  This template parents a book section</p>
+<p><strong>stack</strong>  This template contains a stack</p>
+<p><strong>coversection</strong> - Defines cover section of a ROES book, only used on template with containertype of section.  The default value is true, meaning that the one section should act as the front and back cover of the ROES book.</p>
+<p><strong>cropbackground</strong> - RGB values to use in crop area background for this template, default is 195,195,195.</p>
+<p><strong>defaulttemplate</strong> - Enter template u_id to fill ROES book pages by default when blank page is viewed or a page pair is added. To use 2 different pages for a page pair add, use a comma delimited set of of u_id’s for the 2 desired templates (templates must exist in the section’s templates!).</p>
+<p><strong>disableu_idonorder</strong> - The disableu_idonorder attribute can be used to disable a template or set of templates when another template is ordered, including itself. Once the attribute is added on a template, a single u_id can be added or a comma separated list of u_id’s can be added to disable those templates from being added to the same order. Common uses are for forcing the requirement to only order 1 proof print size per order, such as disabling 3x5, 4x5, 5x5, and 5x7 sizes when a 4x6 is ordered. The disableu_idonorder attribute on the 4x6 would list the u_id’s of the 3x5, 4x5, 5x5 and 5x7, and each of these sizes would have all the other templates’ u_id’s listed in disableu_idonorder to ensure they were mutually exclusive. TIP: To easily obtain the needed list of template u_id’s, select each of the desired templates to become disabled (hold CTRL (Windows) or OPT (OS X) key down as you click on each) and then right click on one of the selected items, and choose Copy u_id’s to clipboard from the list. Select the product where the u_id’s need to be listed in disabledu_idonorder and paste them into the value field.</p>
+<p><strong>displayinset</strong> - Define value for the crop area to be used by a template, i.e. .75 for 75 percent.  This is useful to reduce used area in order show images from options such as frames, so that they do not get cut off by the sides of the crop area.</p>
+<p><strong>dp2_banner</strong> – DP2 Book specific for banner value</p>
+<p><strong>dp2_bleed</strong> – DP2 Book specific for bleed value</p>
+<p><strong>dp2_devicetype</strong> – DP2 Book specific, such as value of:  nexpress</p>
+<p><strong>dp2_inkname</strong> – DP2 Book specific, such as value: NexPress Dry Ink Clear</p>
+<p><strong>dp2_produce</strong> – Should only be used as false if needed; defines whether or not to produce in DP2.  The default condition is true.</p>
+<p><strong>true</strong> This template should be produced in DP2 (never needed to set true)<br>
+<strong>false</strong> This template should not be produced in DP2</p>
+<p><strong>dp2_templatename</strong> – DP2 Book specific, such as value of: 6.5x6.5 Soft Cov 2 S</p>
+<p><strong>enablewhenordertotal</strong> - The enablewhenordertotal attribute allows you to set up a special offer template that will only become enabled when the order total reaches the value entered. For example, you can offer a free 16x20 with a $25 order by setting up the special 16x20 with a 0.00 price, adding enablewhenordertotal and setting the value to 25. This attribute should be used with disableu_idonorder to re-disable it’s own u_id value upon being ordered, and also the nextselectedonorder attribute to list the u_id of the first product in the catalog to ensure the customer cannot stay on the product and order more than one.</p>
+<p><strong>fit</strong> -  defines whether to crop of fit the full image inside the nodes in the template</p>
+<p><strong>true</strong> fit on all nodes<br>
+<strong>false</strong> crop on all nodes</p>
+<p><strong>icon</strong> - Enter a url to and image file to use as the sizes palette icon for this template</p>
+<p><strong>id</strong> layout id for lab business use, often same as layoutfile upon</p>
+<p><strong>inheritoptions</strong><br>
+<strong>true</strong> options defined on parent templates apply to this template<br>
+<strong>false</strong> options defined on parent templates do not apply to this template</p>
+<p><strong>initialtemplates</strong> - Enter template a comma delimited set of of u_id’s for the 2 desired templates to list as the default page pairs when the book is initially opened (templates must exist in the section’s templates!).  These 2 pages will populate through all of the pages up to the itemcountminimum.</p>
+<p><strong>isdp2book</strong> - used to define a group of templates as a package (a ROES package)</p>
+<p><strong>true</strong> this template is a packaging comprising its children<br>
+<strong>false</strong> this template is a group or tab</p>
+<p><strong>ispackage</strong> - (Generally this has been replaced by containertype) used to define a group of templates as a package (a ROES package)</p>
+<p><strong>true</strong> this template is a packaging comprising its children<br>
+<strong>false</strong> this template is a group or tab</p>
+<p><strong>itemcountmaximum</strong>  - Numeric value to define the maximum number of pages that can be in this section</p>
+<p><strong>itemcountminimum</strong>  - Numeric value to define the minimum number of pages that can be in this section</p>
+<p><strong>jobtext</strong> - Text passed as-is to Kodak’s DP2 software to affect the job at print time</p>
+<p><strong>layoutfile</strong> - DP2 layout file or Package name, Frontline or  Fuji  unit or Composite file name/value.  DP2 layoutfile listings should retain the .txt extension (i.e. 8x10.txt).  Fuji  unit file listings must be edited to remove the .txt extension (i.e. 4600.txt should be listied only as 4600).  Fuji  composites/templates should be listed with a composite designation followed by the unit file and the template (i.e. COMP(48,2BB01V) where the 48 is a base 4x8 unit and the 2BB01V is a greeting card template).</p>
+<p><strong>layoutimage</strong> - layout background image URL, used with backgroundbackground, and should ideally be a PNG image (Portable Network Graphics) with alphachannels/saved for web in Photoshop for transparency over image nodes.  Must be a full URL, i.e. <a href="http://www.domain.com/imagename.png">http://www.domain.com/imagename.png</a>.</p>
+<p><strong>layoutimagestretched</strong>  - When set to false disables the ROES Client behavior of stretching a layoutimage to conform to a template.</p>
+<p><strong>true</strong>  - Client default behavior: layoutimage defined should be stretched to fit the product applied over</p>
+<p><strong>false</strong>  - layoutimage defined should NOT be stretched to fit the product applied over</p>
+<p><strong>lockpage</strong>  - Enables a ROES book page to be locked into it’s place in the section layout, such as forcing a month into a calendar slot or a blank back into a proof book (should only be used false).</p>
+<p><strong>true</strong>  - This template should be locked and cannot be changed by the user by a drag and drop from the book filmstrip</p>
+<p><strong>false</strong>  - This template is unlocked and users can alter the template(s) in it (the default condition in ROES so should never appear set to false)</p>
+<p><strong>locksection</strong>  - Enables a ROES book section to be locked to prevent template replacement (should only be used true).</p>
+<p><strong>true</strong>  - This template book section is locked and cannot be changed by the user</p>
+<p><strong>false</strong>  - This template book section is unlocked and users can alter the template(s) in it (the default condition in ROES so should never appear set to false)</p>
+<p><strong>nextselectedonorder</strong> - The nextselectedonorder attribute allows you to define a u_id of another template to switch to upon ordering the template this attribute exists on. This is most commonly used with enablewhenordertotal for free/special items, to ensure only one of the free/special items can be ordered by moving off of it automatically upon being ordered. For example, you may offer a free 16x20 when the customer’s order reaches $25, and your catalog this exists in starts with an informational product whose u_id is ROESINFO. You would set up the special 16x20 with a 0.00 price, adding enablewhenordertotal and setting the value to 25. To ensure that only one of this item is added per order, add nextselectedonorder and set the value to ROESINFO, so that upon ordering the free product the program automatically switches to the informational template. TIP: You should also add disableu_idonorder on the free/special template and set the value to its’ own u_id. This will ensure the customer cannot return to the free product and order another copy.</p>
+<p><strong>nodemouseincolor</strong>  - RGB values for mouse in crop area set as R,G,B,A" value="255,255,255,255.</p>
+<p><strong>ordertier</strong><br>
+<strong>true</strong> tiered pricing should be derived from the total quantity of this template in the order, regardless of image<br>
+<strong>false</strong> tiered pricing should be derived from the quantity this template on a per-image basis</p>
+<p><strong>pagelabel</strong>  - Label for pages in a ROES book section, i.e. Cover, only used on containertype section</p>
+<p><strong>pagereditable</strong>  - set to determine whether the template can be modified or have nodes added via the Pager add-on module</p>
+<p><strong>true</strong>  - template can be modified by Pager and all Pager buttons will be available for use (see Node Attributes list below for usage of this attribute on a node to protect lab-  supplied nodes from alteration on a pagereditable product).</p>
+<p><strong>false</strong>  - template cannot be modified by Pager, Pager buttons will be grayed out when product selected.</p>
+<p><strong>panoramic</strong>  - Defines a template as taking 2 pages as a pano in a ROES book (should only be used when needed and set to true).</p>
+<p><strong>true</strong>  - This template is a panoramic in a book</p>
+<p><strong>false</strong>  - This template is not a panoramic in a book</p>
+<p><strong>pb_dp2_produce</strong>  -</p>
+<p><strong>true</strong> This pb_id should be produced in DP2</p>
+<p><strong>false</strong>  This pb_id, like pre-made book covers - should not be produced in DP2</p>
+<p><strong>pb_dp2_unbook</strong>  -</p>
+<p><strong>true</strong>  This should be flattened into single templates in DP2</p>
+<p><strong>false</strong>  This attribute should never be used false</p>
+<p><strong>pb_explicitend</strong>  -</p>
+<p><strong>true</strong> The production book should end on this template - not for use on a section</p>
+<p><strong>false</strong>  The production book does not end on this template</p>
+<p><strong>pb_id</strong>  - Production Book id value for this book.</p>
+<p><strong>pb_mergeonsameid</strong>  -</p>
+<p><strong>true</strong> This template should be produced with the same pb_id book items</p>
+<p><strong>false</strong>  This template, like separate production for front and back covers - should not be merged with rest of book despite sharing pb_id value</p>
+<p><strong>pb_pagespan</strong>  - Page span value for book.</p>
+<p><strong>pb_produce</strong>  -</p>
+<p><strong>true</strong>  This pb_id should be produced with the book</p>
+<p><strong>false</strong>  This pb_id, like pre-made book covers - should not be produced for lab printing</p>
+<p><strong>pb_sa_impositionsignature</strong>  - For Stand Alone Rendering only - defines page render order.</p>
+<p><strong>pb_sa_renderedpagebounds</strong>  - For Stand Alone Rendering only - used on a section to define a rendering size for pages, i.e. a 10x10 set of opposing pages to render as 20x10 would be expressed as bounds values 0,0,20,10.</p>
+<p><strong>pb_sa_pageseparator</strong>  - For Stand Alone Rendering only - defines page separator value.</p>
+<p><strong>pb_sa_unitmargin</strong>  - For Stand Alone Rendering only - defines unit margin value</p>
+<p><strong>per_section</strong>  -</p>
+<p>true - Option is distributed to all layouts in section when selected</p>
+<p>false - This attribute should not be present as false</p>
+<p><strong>preferredqueue</strong>  - ROES Stand Alone Server queue to use for this template.</p>
+<p><strong>price -</strong> numeric characters, periods and commas are the only characters to be used.  No dollar signs or alpha characters.</p>
+<p><strong>pricelabel</strong> - Set on book level to show an overall price and mask the base book price</p>
+<p><strong>printerchannel</strong>  - Channel entry for printer such as Noritsu MP1600</p>
+<p><strong>printersurface</strong>  - Surface entry for printer such as Noritsu MP1600</p>
+<p><strong>qsssurface</strong>  - Surface entry for Noritsu Net Order</p>
+<p><strong>quantitymax</strong> Set a maximum quantity of a product</p>
+<p><strong>quantitymin</strong> Set a minimum quantity of a product</p>
+<p><strong>resetrotationonaddtoorder</strong>  -</p>
+<p><strong>true</strong>  This template will be rotated back to default when added to an order</p>
+<p><strong>false</strong>  This template will not be back to default when added to an order</p>
+<p><strong>rotation</strong> degrees to rotate the layout initially in ROES client, usually for use in a package via ispackage, i.e. 90 for showing a 7x5 as a 5x7 (rotation does not carry over into the job at the lab).</p>
+<p><strong>rotationallowed</strong> - defines whether template can be rotated.  When set to true will disable Rotate Layout arrows.</p>
+<p><strong>true</strong>  This template can be rotated</p>
+<p><strong>false</strong>  This template cannot be rotated</p>
+<p><strong>rotationamount</strong> - Degrees to rotate the layout when the Rotate layout is clicked.  The default is 90.</p>
+<p><strong>sa_pagespan</strong> - Stand Alone Rendering only: To define a panoramic template for rendering.  Set to 2 and only add if a panoramic true product.</p>
+<p><strong>sizespalette attributes</strong>  - The ability to alter the view of the products in the Sizes palette for use on template groups/folder to control the particular group (or we can still set them globally in the client configuration if desired to affect all template folders). So you could have small icons &amp; text on the right for standard sizes or single node products with the following attributes and values**: sizespaletteiconlayout**=“grid”  <strong>sizespaletteiconsize</strong>=“10”  <strong>sizespalettetextposition</strong>=“right”.</p>
+<p>For more complex products or products that should get a preview in the palette (like greeting cards or memory mates), large icons with text underneath can be set using:  <strong>sizespaletteiconlayout</strong>=“flow”  <strong>sizespaletteiconsize</strong>=“64”  <strong>sizespalettetextposition</strong>=“bottom”. If the  <strong>sizespaletteiconlayout</strong>  value is set to grid, then  <strong>the ui_columns</strong>  attribute works in that group, so you could have them arranged in a single column if desired by setting the  <strong>ui_columns</strong>  to 1.</p>
+<p><strong>spinalgap</strong>  - Width to set as a gap for spine/binding appearance</p>
+<p><strong>templateoffset</strong>  - Widths and height to offset Pager nodes when added to a template above 0,0</p>
+<p><strong>tiertype -</strong> allows you to specify price discounts for the same product with the same image in it based on quantity ordered.  Selections:</p>
+<p><strong>step</strong> each step level in quantity retains its’ pricing (in example below, 10 items would cost 12.60 - 1st one 1.50, 2nd thru 9th 1.25, 10th 1.10)<br>
+<strong>graded</strong> change the cost of lesser quantities when a certain quantity is reached (in the example below, 10 items would cost 11.10 - all 10 would be 1.10 each)<br>
+<strong>threshold</strong> used mainly for setting pricing on Shipping Methods and with the uses attribute (see Shipping section), to make this method/option always cost this amount when a given quantity/value is reached (in the 2nd example below order of $50 would charge $12.95 for shipping,  while and order of $200 would charge 0 for shipping to allow for free shipping offers).</p>
+<p><strong>Usage in price attribute Example 1:</strong></p>
+<p><strong>Single price:</strong> 1.50 <strong>Tiered price to offer discounted scale on copies of same print</strong> (expressed as qty,price,qty,price…): 1,1.50,2,1.25,10,1.10,25,1.00,50,.90,100,.75</p>
+<p><strong>Usage in price attribute Example 2 (for Handling/Shipping/Shipping Method):</strong></p>
+<p><strong>Tiered price</strong> (expressed as value,price,value,price…): 1,4.95,20,7.95,50,12.95,100,19.95,150,24.95,200,0</p>
+<p><strong>tooltip</strong>  - If you want to be able to convey additional information about a product to studios, try adding an attribute of tooltip to the item and enter text you want them to see pop-up when they mouse over the product in the Sizes palette. This could be used to add reminders to look at mounting, sprays and other upsell options, to inform customers if an item is Pager editable, or available quantity discounts.</p>
+<p><strong>u_id</strong>  - unique identifier, should never match between products or options.  If a match occurs it will create an alert entry in the Alerts section of the Template Tool.</p>
+<p><strong>ui_columns</strong>  - used to force a template group to a set level of columns, expressed as a whole number.</p>
+<p><strong>unitu_id</strong>  - For use with units: this is the u_id of the unit comprising this template</p>
+<p><strong>unitquantity</strong>- For use with units: use 1 for half-unit if offered and then 2 for full units or 1 for all full units</p>
+<p><strong>verticalflip</strong>  - For ROES Books only; to define whether the book flips up and down as opposed to the default right and left (only needs to be listed as true).</p>
+<p>true  This book flips pages up or down</p>
+<p>false  This book flips pages left and right</p>
+<p><strong>weight</strong> - Enter a value to be used for weight calculations via the uses attribute in an Order Option or Shipping Method</p>
+</div>
+</body>
+
+</html>

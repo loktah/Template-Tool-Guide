@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node Attributes</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><strong>bounds</strong> bounds of the node, before any rotations are applied.</p>
+<p><strong>characterlimit</strong>  - Limit the number of characters in a text node.</p>
+<p><strong>clearonaddtoorder</strong>  - Defines whether or not the node in the product should be cleared when it is added to the order.</p>
+<p><strong>true</strong>  This node will be cleared of image or text when added to an order</p>
+<p><strong>false</strong>  Not needed to be set to false as to leave image or text intact is default behavior</p>
+<p><strong>color</strong> - color for text in text nodes.  Can also be used on a node under an overrides addition from an option group to offer font color selections/changes.</p>
+<p><strong>editable</strong>  - Defines whether or not the text node can be modified or not by the customer.</p>
+<p><strong>true</strong>  Never needs to be set true as this is default condition in ROES</p>
+<p><strong>false</strong>  Customer cannot edit this text node</p>
+<p><strong>fillcolor</strong> fill color for nodes.  Can also be used on a node under an overrides addition from an option group to offer fill color selections/changes.</p>
+<p><strong>fillcolormaskimage</strong> mask image for fill colors, expressed a full URL (http:/www.domain.com/mask.jpg).  Can also be used on a node under an overrides addition from an option group to offer fill color mask image selections/changes.</p>
+<p><strong>editable</strong><br>
+<strong>true</strong> text nodes only: user can modify text<br>
+<strong>false</strong> text nodes only: prevents changing default text</p>
+<p><strong>fit</strong><br>
+<strong>true</strong> image is fit inside node<br>
+<strong>false</strong> image can be cropped in node</p>
+<p><strong>fitallowed</strong><br>
+<strong>true</strong> Customer can turn fit on this node (since this is the default condition fitallowed should never be used set to true)<br>
+<strong>false</strong> Customer can not turn fit on this node, node will be crop only</p>
+<p><strong>font</strong> the font name to use in this node if text is the input.  Can also be used on a node under an overrides addition from an option group to offer font type selections/changes.</p>
+<p><strong>id</strong> node id in layout, in DP2 and  Fuji  systems should not be altered from the given number (i.e. 1, 10000, etc. if DP2 and p0, etc. for  Fuji).  Should be added as an attribute on each node for Stand Alone Rendering Server users to set order of the nodes in a template/product.</p>
+<p><strong>input</strong><br>
+<strong>image</strong> this node accepts an image<br>
+<strong>text</strong> this node accepts text<br>
+<strong>none</strong> this empty node is used for drawing rectangles</p>
+<p><strong>jobtext</strong></p>
+<p><strong>justify</strong> - for text nodes to set appearance of text, with radio buttons to select  <strong>left, center, or right</strong>.  Can also be used on a node under an overrides addition from an option group to offer justification selections/changes.</p>
+<p><strong>label</strong>  - label for node to display instead of default value</p>
+<p><strong>maskimage</strong> - to define an image mask on a product, usually a full URL to a JPG file (i.e.  <a href="http://www.domain.com/mask.jpg">http://www.domain.com/mask.jpg</a>).  Can also be used on a node under an overrides addition from an option group to offer mask image selections/changes.</p>
+<p><strong>monochrome</strong> - amount to adjust RGB values after desaturating an image, usually added via an overrides addition to represent black and white and/or sepia tone options when selected by the user.</p>
+<p><strong>newlines</strong>  - Sets number of lines for entry in text nodes, 1 restricts to a single line.</p>
+<p><strong>nodeimage</strong> analogous to layoutimage for node, this is a lab predefined node image, plotted on top of the user image for representation in the ROES Client only.</p>
+<p><strong>noderotation</strong> the amount to rotate the node in a template</p>
+<p><strong>opacity</strong> opacity of the node, where 1.0 is fully opaque and 0.0 is fully transparent.  Can also be used on a node under an overrides addition from an option group to offer opacity selections/changes.</p>
+<p><strong>outputrender</strong>  - Stand Alone Server use only, for nodeimages that should not render like diecut or canvas guides</p>
+<p><strong>true</strong>  Node should be rendered (never needs to be used true as this is default condition in ROES)</p>
+<p><strong>false</strong>  Node should not be rendered by the ROES Stand Alone Server</p>
+<p><strong>pagerdecoratable</strong>  - defines whether pager design tools can be used on this node.</p>
+<p><strong>true</strong>  This node can be decorated using Pager tools but not moved in pager</p>
+<p><strong>false</strong>  This node cannot be decorated by users in the Pager feature</p>
+<p><strong>pagereditable</strong>  - defines whether pager tools can be used on this node.</p>
+<p><strong>true</strong>  This node can be edited by users in the Pager feature</p>
+<p><strong>false</strong>  This node cannot be edited by users in the Pager feature</p>
+<p><strong>pagermovable</strong>  - defines whether pager node editing tools can be used on this node.</p>
+<p><strong>true</strong>  This node can be moved or resized by users in the Pager</p>
+<p><strong>false</strong>  This node cannot be moved or resized by users in the Pager</p>
+<p><strong>ppumin</strong>  - pixels per unit minimum for the image that can be added to this node before an alert is given to the user that the image is really too small for this node/product.</p>
+<p><strong>ppumax</strong>  - pixels per unit maximum for the image that can be added to this node before an alert is given to the user that the image is really larger than it needs to be for this node/product.</p>
+<p><strong>rotation</strong>  - For adjusting horizontal text in a tall thin node to be read on its side vertically, use 90 to turn text right/down or -90 to turn text left/up</p>
+<p><strong>shape</strong><br>
+<strong>rectangle</strong> node shape is a rectangle (default)<br>
+<strong>ellipse</strong> node shape is an ellipse or oval</p>
+<p><strong>polygon</strong> node shape is a polygon</p>
+<p><strong>size</strong>  - for use on text nodes, type this attribute in manually to set the maximum font size to be displayed.</p>
+<p><strong>strokecolor</strong> - the color to draw node rectangles.  Can also be used on a node under an overrides addition from an option group to offer stroke color selections/changes.</p>
+<p><strong>stripextension</strong>  - Set to true to remove extension from linked text node filenames.</p>
+<p><strong>true</strong>  Linked text node will strip extension from filename</p>
+<p><strong>false</strong>  Linked text node will not strip extension from filename</p>
+<p><strong>striptext</strong>  - Text to remove from text nodes, usually the default text, to prevent it from being passed into the order</p>
+<p><strong>stroketype</strong> - type of stroke to be added.  Can also be used on a node under an overrides addition from an option group to offer stroke type selections/changes.<br>
+<strong>solid</strong> stroke node with a solid line<br>
+<strong>dashed</strong> stroke node with a dashed line</p>
+<p><strong>strokeimage</strong><br>
+<strong>true</strong> stroke should circumscribe image<br>
+<strong>false</strong> stroke should circumscribe node</p>
+<p><strong>strokelocation</strong>  - Alters stroke behavior to be on the outside of nodes, and makes strokewidth be in template units instead of pixels</p>
+<p><strong>center</strong>  Stroke is centered on node bounds, older behavior</p>
+<p><strong>outside</strong> Stroke is outside of node bounds and is in template units, such as inches or cm</p>
+<p><strong>strokewidth</strong> the width to draw node rectangles.  Can also be used on a node under an overrides addition from an option group to offer stroke width selections/changes.</p>
+<p><strong>style</strong> - used to display fonts in text nodes. Can also be used on a node under an overrides addition from an option group to offer font style selection/changes.<br>
+<strong>plain</strong> show this font in plain type</p>
+<p><strong>bold</strong> show this font in bold<br>
+<strong>italic</strong> show this font in italic<br>
+<strong>bolditalic</strong> show this font in bold and italic</p>
+<p><strong>text</strong> - will show and retain into the order the default text entry prompt for a text node.  Should only be used if the default ‘Enter text here’ needs to be altered for items like a trader card or sports mate where you may want to label fields for the customer as ‘Enter Player Name’ or ‘Enter Team Name’ etc.  If not used on a text node the default ‘Enter text here’ will display initially in to the customer but vanish upon selection of the node (or if the node never is selected, upon Add to Order)) so that it will not pass through into the order. This is a safety measure for labs that have studios that forget to make entries into text nodes on products, so that the default text will not get rendered onto the products.</p>
+<p><strong>textentrywidth</strong>  - Value in pixels to display the animated text drawer for entry</p>
+<p><strong>url</strong> - URL to open when node is clicked. Only works with input “none” nodes.</p>
+<p><strong>u_id</strong>  - unique identifier that can be added to a node to match the u_id of a node used off an option to make overrides take effect in the ROES Client.  Commonly used among nodes where options (such as image tone changes, text font and/or color changes, stroke changes, background changes, opacity changes, etc.) need to be represented in the crop area for the user to see how the selection should appear when printed.</p>
+<p><strong>unlockonaddtoorder</strong><br>
+<strong>true</strong> When set on a node that was manually locked with an image<br>
+<strong>false</strong> stroke should circumscribe node</p>
+<p><strong>verticaltext</strong>  - Can be used to have text appear vertically in a text node.</p>
+<p><strong>true</strong>  Text should display vertically</p>
+<p><strong>false</strong>  Text should display horizontally (not needed false as this is default condition in ROES)</p>
+<p><strong>vertices</strong> vertices for polygonal nodes (shape must be polygon)</p>
+</div>
+</body>
+
+</html>

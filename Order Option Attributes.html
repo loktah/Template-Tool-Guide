@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Option Attributes</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><strong>rderminimum</strong>  - will not allow an order to be sent if the value in dollars has not been met or exceeded.</p>
+<p><strong>priceminimum</strong>  - will force the set value to appear as the order price if a dollar amount below the defined number is ordered.</p>
+<p><strong>quantityminimum and/or quantitymaximum</strong>  - quantityminimum will flash a warning message that the specified minimum number of prints has not been reached and not allow the order to be sent.  The quantitymaximum attribute will also flash a warning message that the defined maximum number of prints for an order has been exceeded and some need to be removed.  Additionally, these 2 attributes can be used together with the same value to force a set number of prints into an order, so you can use catalogs to define album sizes where a set number of print pages need to be ordered (like 36 for an 18 page bound album).  Both attributes do list the actual number so customers can know how much they need to add or subtract from the  order, and the default verbiage in the dialog windows can be altered if desired by SoftWorks for your client launch.</p>
+<p><strong>ui_columns</strong>  - used to force Order Options options to be listed as a single column when set to 1 (this should be set in the new Retail UI).  For multiple columns, set to any whole number desired.</p>
+<p><strong>Attributes EXCLUSIVELY for Options built off of Order Options:</strong></p>
+<p>**filter_type<br>
+**<strong>true</strong> option includes specified templates</p>
+<p><strong>false</strong> option excludes specified templates</p>
+<p><strong>per_image</strong>  - can be placed directly on an option to apply the selected option to every image in the order, i.e. Color Correction.</p>
+<p><strong>per_item</strong>  - can be placed directly on an option to apply the selected option to every product ordered, i.e. addition of a studio logo, paper type selections to force an entire order to a single paper surface, etc.</p>
+<p><strong>totalpricemultiplier</strong>  - this attribute, which should be manually typed in, is used on an override addition off of an option to alter the price of an entire order.  It can only take effect once per order, used to override the order price to increase it (i.e. a value of 1.25 to add 25% to an order for rush production or metallic paper type selection) or to decrease the order price (i.e. a value of .95 to give an overall 5% discount on a customer specific template that is used by multiple customers or for a Pick Up At Lab shipping selection where the lab includes basic shipping in their order prices).</p>
+</div>
+</body>
+
+</html>

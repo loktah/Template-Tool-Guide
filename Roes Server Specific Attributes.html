@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roes Server Specific Attributes</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><strong>autoenqueue</strong> – This attribute should be set at the template level to true or false in order to override the ROES Server’s setting in the Options pane (checkbox for Auto-Enqueue Order Items). In most cases the checkbox in the Server is not selected so autoenqueue is set to true on templates that should bypass this and proceed straight to there queue/the default queue.</p>
+<p><strong>outputrender</strong> – The outputrender attribute can be set to false on a node inside a template to keep it from being rendered, such as a guide image, frame, or canvas overlay (never needed to be set to true).</p>
+<p><strong>outputrenderlayoutimage</strong> – The outputrenderlayoutimage attribute can be set to false on a template to instruct the ROES Server to ignore the presence of a layoutimage when rendering the product (never needs to be set to true).</p>
+<p><strong>preferredqueue</strong> – The preferredqueue attribute is a case sensitive value defined on a template to define what queue to feed into in the ROES Server. It should match the Queue name value in the ROES Server exactly.</p>
+<p><strong>printerchannel</strong> – The printerchannel attribute can be added on a template to set the Channel entry for printer such as Noritsu MP1600.</p>
+<p><strong>printersurface</strong> – The printersurface attribute can be added on a template to set the Surface entry for printer such as Noritsu MP1600.</p>
+<p><strong>qsssurface</strong> – The qsssurface attribute can be added on a template to set the Surface entry for Noritsu Net Order.</p>
+<p><strong>sa_pagespan</strong> – The sa_pagespan attribute is to define a panoramic template for rendering. Set to 2 and only add if a pano product.</p>
+<p><strong>ROES Server for DP2:</strong></p>
+<p><strong>isdp2book</strong>  – The isdp2book attribute</p>
+<p><strong>jobtext</strong>  – The jobtext attribute can be added onto any template, node, or option. The text is passed as-is to Kodak’s DP2 software to affect the job at print time.</p>
+<p><strong>retouch</strong>  – The retouch attribute can be used on an Image Option in ROES to mark the image for retouch in the KPARS module in DP2.</p>
+<p><strong>servercommand</strong> – The servercommand attribute is used to pass additional operations into DP2 (defined further in the ROES DP2 Server User’s Guide).</p>
+<p><strong>templateoffset</strong> – The templateoffset attribute can be set on a template as x,y coordinates to alter the bounds of user drawn nodes when passed back into the ROES Server for DP2.</p>
+</div>
+</body>
+
+</html>
